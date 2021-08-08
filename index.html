@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf8">
+  <title>Html Language</title>
+  <script src="src/Language.ts"></script>
+</head>
+
+<body>
+  <let-bind to="x">1</let-bind>
+  <let-bind to="sum" vars="list" rec>
+    <let-bind to="[head,...tail]">list</let-bind>  
+    <add-val> 
+      <raw-val>head</raw-val>
+      <eval-expr func="sum" vars="tail"></eval-expr>
+    </add-val>
+  </let-bind>
+
+
+
+  <if-then-else
+    condition="x"
+  >
+    <if-true>1</if-true>
+    <if-false>2</if-false>
+  </if-then-else>
+
+  <switch-case of="x">
+    <case-of val="1">1</case-if>
+    <case-of val="2">"2"</case-if>
+  </switch-case>
+
+
+</body>
