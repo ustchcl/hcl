@@ -1,3 +1,4 @@
+import { Div, Span } from './DomNode'
 import { Log } from './Utils'
 
 class LetBind extends HTMLElement {
@@ -19,6 +20,10 @@ class LetBind extends HTMLElement {
     const vars = this.getAttribute('vars') ?? ""
     const variableArr = vars.split(",").filter(x => x.length > 0)
     Log.error(to, variableArr)
+
+    // new Div({
+    //   children: [to, ...variableArr].map(elm => new Span({children: new Text()}))
+    // })
   }
 }
 
